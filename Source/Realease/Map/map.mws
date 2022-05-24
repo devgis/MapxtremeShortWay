@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WorkSpace name="" version="MXP_WorkSpace_1_3" date="2014-04-26T20:05:11+08:00" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.mapinfo.com/mxp">
+  <ConnectionSet />
+  <DataSourceDefinitionSet>
+    <RasterFileDataSourceDefinition id="id1" readOnly="false">
+      <DataSourceName>Driving School--image</DataSourceName>
+      <FileName>Driving School--image.TAB</FileName>
+    </RasterFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id2" readOnly="false">
+      <DataSourceName>Driving School装饰</DataSourceName>
+      <FileName>Driving School装饰.TAB</FileName>
+    </TABFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id3" readOnly="false">
+      <DataSourceName>Node</DataSourceName>
+      <FileName>Node.TAB</FileName>
+    </TABFileDataSourceDefinition>
+    <TABFileDataSourceDefinition id="id4" readOnly="false">
+      <DataSourceName>Road</DataSourceName>
+      <FileName>Road.TAB</FileName>
+    </TABFileDataSourceDefinition>
+  </DataSourceDefinitionSet>
+  <MapDefinitionSet>
+    <MapDefinition id="id5" name="Map1" alias="Map1">
+      <DisplayConditions>
+        <MapSize uom="mapinfo:imagesize pixel">
+          <ImageWidth>986</ImageWidth>
+          <ImageHeight>615</ImageHeight>
+        </MapSize>
+        <ZoomAndCenter>
+          <MapZoom uom="mapinfo:length mi">0.144888</MapZoom>
+          <gml:Point srsName="mapinfo:coordsys 1,104">
+            <gml:coordinates>130.76400125510287,33.917781770352974</gml:coordinates>
+          </gml:Point>
+        </ZoomAndCenter>
+        <DisplayCoordSys>
+          <SRSName>mapinfo:coordsys 1,104</SRSName>
+        </DisplayCoordSys>
+        <ResizeMethod>preserveZoom</ResizeMethod>
+        <RasterConditions dither="halfTone" rasterReprojectionResampling="cubicConvolution" rasterReprojection="none" trueColor="true" optimizeRasterLayers="screen" optimizeVectorLayers="screen" />
+        <RenderingOptions enableOpacity="false" enableAntiAlias="false" />
+      </DisplayConditions>
+      <LayerList>
+        <LabelLayer id="id6" name="标记" alias="Layer1" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <LabelSourceList>
+            <LabelSource maxLabels="2147483647" name="Node">
+              <DataSourceRef ref="id3" />
+              <BaseLabelProperties>
+                <LabelProperties>
+                  <LabelVisibility visible="true" allowOverlap="false" allowDuplicates="all" allowOutOfView="false">
+                    <VisibleRange enabled="false">
+                      <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 100000</ZoomRange>
+                    </VisibleRange>
+                  </LabelVisibility>
+                  <LabelText justification="left">
+                    <BaseLabelStyle>
+                      <FontStyle family="Microsoft Sans Serif" font-style="normal" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="12" size-unit="mapinfo:length pt" stroke="black" />
+                    </BaseLabelStyle>
+                    <StringTokenList>
+                      <StringToken>
+                        <StringValueExpression>
+                          <AttributeName>Name</AttributeName>
+                        </StringValueExpression>
+                      </StringToken>
+                    </StringTokenList>
+                    <LabelCharacterLimit spacing="1">2147483647</LabelCharacterLimit>
+                  </LabelText>
+                  <LabelCallout visible="true" end="arrow">
+                    <LineStyle stroke="black" stroke-opacity="1" width="1" width-unit="mapinfo:imagesize pixel">
+                      <Pen>mapinfo:pen 2</Pen>
+                    </LineStyle>
+                  </LabelCallout>
+                  <LabelReferencePosition recalculate="outOfView">
+                    <LineLabelPositionInterval>0</LineLabelPositionInterval>
+                  </LabelReferencePosition>
+                  <LabelLayout>
+                    <Alignment>
+                      <HorizontalAlignment>left</HorizontalAlignment>
+                      <VerticalAlignment>center</VerticalAlignment>
+                    </Alignment>
+                    <Offset uom="mapinfo:imagesize pixel">
+                      <XOffset>0</XOffset>
+                      <YOffset>0</YOffset>
+                    </Offset>
+                    <LabelAngle uom="degrees" origin="referencePoint">0</LabelAngle>
+                  </LabelLayout>
+                  <LabelBaseSize useScale="false">
+                    <MapScale>0</MapScale>
+                  </LabelBaseSize>
+                  <LabelPriority>
+                    <MajorPriority>
+                      <NumericValueExpression>
+                        <MapinfoNumericExpression>
+                        </MapinfoNumericExpression>
+                      </NumericValueExpression>
+                    </MajorPriority>
+                    <MinorPriority>
+                      <NumericValueExpression>
+                        <MapinfoNumericExpression>
+                        </MapinfoNumericExpression>
+                      </NumericValueExpression>
+                    </MinorPriority>
+                  </LabelPriority>
+                </LabelProperties>
+              </BaseLabelProperties>
+              <LabelThemeList />
+            </LabelSource>
+          </LabelSourceList>
+        </LabelLayer>
+        <FeatureLayer id="id7" name="Node" alias="Node" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id3" />
+          <FeatureStyleModifierThemeList>
+            <FeatureStyleOverrideTheme id="id8" name="样式覆盖" alias="FeatureStyleModifier1">
+              <CompositeStyle>
+                <PointStyle>
+                  <FontSymbol family="Map Symbols" font-style="normal" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="8" size-unit="mapinfo:length pt" angle="0" angle-unit="mapinfo:angle deg" text="/" />
+                </PointStyle>
+                <MapinfoTextObjectStyle>
+                  <FontStyle family="Microsoft Sans Serif" font-style="normal" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="12" size-unit="mapinfo:length pt" stroke="black" />
+                  <LineStyle stroke="black" stroke-opacity="1" width="1" width-unit="mapinfo:imagesize pixel">
+                    <Pen>mapinfo:pen 2</Pen>
+                  </LineStyle>
+                </MapinfoTextObjectStyle>
+              </CompositeStyle>
+            </FeatureStyleOverrideTheme>
+          </FeatureStyleModifierThemeList>
+        </FeatureLayer>
+        <FeatureLayer id="id9" name="Road" alias="Road" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id4" />
+          <FeatureStyleModifierThemeList>
+            <FeatureStyleOverrideTheme id="id10" name="样式覆盖" alias="FeatureStyleModifier1">
+              <CompositeStyle>
+                <LineStyle>
+                  <Pen>mapinfo:pen 63</Pen>
+                </LineStyle>
+                <MapinfoTextObjectStyle>
+                  <FontStyle family="Microsoft Sans Serif" font-style="normal" effect="white" effect-opacity="1" effect-type="none" font-weight="normal" text-decoration="none" text-case="default" shadow="false" expand="false" size="12" size-unit="mapinfo:length pt" stroke="black" />
+                  <LineStyle stroke="black" stroke-opacity="1" width="1" width-unit="mapinfo:imagesize pixel">
+                    <Pen>mapinfo:pen 2</Pen>
+                  </LineStyle>
+                </MapinfoTextObjectStyle>
+              </CompositeStyle>
+            </FeatureStyleOverrideTheme>
+          </FeatureStyleModifierThemeList>
+        </FeatureLayer>
+        <FeatureLayer id="id11" name="Driving School装饰" alias="Driving School装饰" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id2" />
+        </FeatureLayer>
+        <FeatureLayer id="id12" name="Driving School--image" alias="Driving School--image" volatile="unknown">
+          <Visibility visible="true">
+            <VisibleRange enabled="false">
+              <ZoomRange uom="mapinfo:length mi" minInclusive="true" maxInclusive="false">0 0</ZoomRange>
+            </VisibleRange>
+          </Visibility>
+          <DataSourceRef ref="id1" />
+        </FeatureLayer>
+      </LayerList>
+      <MapLegendSet />
+    </MapDefinition>
+  </MapDefinitionSet>
+  <MapinfoApplicationData>
+    <MapXtremeWindows>
+      <MapToolsSet>
+        <MapTools ref="id5">
+          <BaseMapToolProperties>
+            <MapToolProperties>
+              <InfotipProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InfoTipLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="drillDown grid vector raster seamless wms" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id7 id9 id11 id12" />
+                  <LayerExclude refs="id6" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </InfotipProperties>
+              <SnapToNodeProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SnapLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id7 id9 id11" />
+                  <LayerExclude refs="id6 id12" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SnapToNodeProperties>
+            </MapToolProperties>
+          </BaseMapToolProperties>
+          <BaseInsertionToolProperties>
+            <InsertionToolProperties>
+              <MapToolFilter name="MapInfo.Tools.MapToolsDefault.InsertionLayers">
+                <MapToolInitialFilter>
+                  <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                </MapToolInitialFilter>
+                <LayerExclude refs="id6 id7 id9 id11 id12" />
+                <MapToolFinalFilter>
+                  <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                </MapToolFinalFilter>
+              </MapToolFilter>
+            </InsertionToolProperties>
+          </BaseInsertionToolProperties>
+          <BaseSelectionToolProperties>
+            <SelectionToolProperties>
+              <SelectionProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.SelectLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerTypeFilter types="vector" />
+                  </MapToolInitialFilter>
+                  <LayerInclude refs="id7 id9 id11" />
+                  <LayerExclude refs="id6 id12" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </SelectionProperties>
+              <EditingProperties>
+                <MapToolFilter name="MapInfo.Tools.MapToolsDefault.EditLayers">
+                  <MapToolInitialFilter>
+                    <MapLayerVisibilityFilter useVisible="false" useNotVisible="false" />
+                  </MapToolInitialFilter>
+                  <LayerExclude refs="id6 id7 id9 id11 id12" />
+                  <MapToolFinalFilter>
+                    <MapLayerVisibilityFilter useVisible="true" useNotVisible="false" />
+                  </MapToolFinalFilter>
+                </MapToolFilter>
+              </EditingProperties>
+            </SelectionToolProperties>
+          </BaseSelectionToolProperties>
+        </MapTools>
+      </MapToolsSet>
+    </MapXtremeWindows>
+  </MapinfoApplicationData>
+</WorkSpace>

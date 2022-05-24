@@ -1,0 +1,10 @@
+!table
+!version 300
+!charset WindowsSimpChinese
+
+Definition Table
+  Type NATIVE Charset "WindowsSimpChinese"
+  Fields 3
+    FNODE Char (10) ;
+    TNODE Char (10) ;
+    NAME Char (10) ;

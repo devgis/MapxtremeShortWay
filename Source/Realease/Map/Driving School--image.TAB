@@ -1,0 +1,15 @@
+!table
+!version 300
+!charset WindowsSimpChinese
+
+Definition Table
+  File "driving school--image.jpg"
+  Type "RASTER"
+  (130.764236,33.917878) (633,183) Label "Pt 1",
+  (130.763005,33.917907) (285,173) Label "Pt 2",
+  (130.764236,33.917557) (633,293) Label "Pt 3",
+  (130.764927,33.917832) (828,198) Label "Pt 4",
+  (130.763829,33.918109) (517,104) Label "Pt 5",
+  (130.764989,33.9182) (843,73) Label "Pt 6"
+  CoordSys Earth Projection 1, 104
+  Units "degree"

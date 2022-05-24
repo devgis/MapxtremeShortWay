@@ -1,0 +1,63 @@
+!Workspace
+!Version 650
+!Charset WindowsSimpChinese
+Open Table "Driving School--image.TAB" As Driving_School__image Interactive
+Open Table "Driving School装饰" As Driving_School装饰 Interactive
+Open Table "Road" As Road Interactive
+Open Table "Node" As Node Interactive
+Set Window Info
+  Position (9.625,5.6875) Units "in"
+  Width 2.60417 Units "in" Height 1.0625 Units "in" 
+  Font ("System",0,12,0)
+Open Window Info
+Map From Node,Road,Driving_School装饰,Driving_School__image 
+  Position (0.0520833,0.0520833) Units "in"
+  Width 7.03125 Units "in" Height 3.09375 Units "in" 
+Set Window FrontWindow() ScrollBars Off Autoscroll On
+Set Map
+  CoordSys Earth Projection 1, 104
+  Center (130.7636641,33.91772977)
+  Zoom 0.2934860893 Units "km"
+  Preserve Zoom Display Zoom
+  Distance Units "km" Area Units "sq km" XY Units "degree"
+Set Map
+  Layer 1
+    Display Graphic
+    Global   Symbol (35,0,12)   
+    Label Line Arrow Position Right Font ("Arial",0,12,0) Pen (1,2,0) 
+      With Name
+      Parallel On Auto On Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 2
+    Display Graphic
+    Global   Symbol (35,0,12)   
+    Label Line Arrow Position Right Font ("Arial",0,12,0) Pen (1,2,0) 
+      With NAME
+      Parallel On Auto On Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 3
+    Display Graphic
+    Global   Symbol (35,0,12)   
+    Label Line Arrow Position Above Font ("Arial",0,12,0) Pen (1,2,0) 
+      With ID
+      Parallel On Auto Off Overlap Off Duplicates Off Offset 2
+      Visibility On
+  Layer 4
+    Display Graphic
+    Global   Symbol (35,0,12)   
+    Selectable Off
+    Zoom (0.0082, 3.3) Units "km" 
+  contrast 50 
+  brightness 50 
+  alpha 255 
+    transparency on 
+  color 0 
+    grayscale off 
+Set Map Layer 1 Editable
+Set Window FrontWindow() Printer
+ Name "发送至 OneNote 2013" Orientation Portrait Copies 1
+ Papersize 9
+Dim WorkspaceMaximizedWindow As Integer
+WorkspaceMaximizedWindow = Frontwindow()
+Set Window WorkspaceMaximizedWindow Max
+Undim WorkspaceMaximizedWindow
